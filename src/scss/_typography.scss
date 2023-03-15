@@ -1,0 +1,21 @@
+@mixin belfair($font-size) {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: $font-size;
+  margin: 0;
+}
+
+@mixin barlow($font-size) {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: $font-size;
+  margin: 0;
+}
+@each $key, $val in $font-sizes {
+  .belfair-#{$key} {
+    @include belfair($val);
+  }
+  .barlow-#{$key} {
+    @include barlow($val);
+  }
+}

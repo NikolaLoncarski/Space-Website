@@ -1,0 +1,110 @@
+@import "./variables";
+@import "./base.scss";
+.crewSection {
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-image: url(../assets/crew/background-crew-desktop.jpg);
+
+  background-size: cover;
+  .flexCrewSection {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 212px;
+    justify-content: space-between;
+  }
+  .crewFlexContainer {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    bottom: 0;
+    justify-content: space-between;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    .crewInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 614px;
+      min-width: 0;
+      right: 0;
+      flex-wrap: wrap;
+      align-self: center;
+      height: max-content;
+    }
+    .crewDetails {
+      width: 614px;
+    }
+    h4 {
+      color: $white;
+      text-align: start;
+      opacity: 0.5;
+    }
+    h3 {
+      color: $white;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      max-width: 444px;
+      color: $grey;
+    }
+  }
+  .imgContainer {
+    height: 100%;
+
+    width: max-content;
+    max-height: 100%;
+    object-fit: cover;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .crewSection {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+    align-items: center;
+
+    .flexCrewSection {
+      top: 15%;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      height: 85%;
+      .imgContainer {
+        align-self: center;
+
+        height: 50%;
+      }
+      .sectionIntro {
+        position: absolute;
+        left: 34.5px;
+        top: -100px;
+      }
+      .crewFlexContainer {
+        align-items: center;
+        flex: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        justify-content: space-around;
+        .crewInfo {
+          align-items: center;
+          width: 520px;
+          h3 {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

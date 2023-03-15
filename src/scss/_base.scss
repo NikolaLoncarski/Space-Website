@@ -1,0 +1,31 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+.sectionIntro {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+
+  gap: 1rem;
+  top: 212px;
+  left: 166.5px;
+  h5 {
+    color: $grey;
+  }
+  p {
+    color: $white;
+  }
+}
+@media (max-width: 768px) {
+  .sectionIntro {
+    left: 38.5px;
+    top: 136px;
+  }
+}

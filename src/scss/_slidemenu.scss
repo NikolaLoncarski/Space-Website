@@ -1,0 +1,14 @@
+@media (max-width: 375px) {
+  .hamMenu {
+    width: 24px;
+    height: 21px;
+  }
+  .slideInMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: red;
+  }
+}

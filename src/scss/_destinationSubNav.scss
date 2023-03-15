@@ -1,0 +1,31 @@
+@import "./variables";
+
+.subNav {
+  font-family: "Barlow Condensed", sans-serif;
+
+  color: $grey;
+  display: flex;
+  flex-direction: row;
+  width: 285.5px;
+  height: 34px;
+  align-items: center;
+  line-height: 34px;
+  justify-content: space-between;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+  li {
+    margin: 0;
+  }
+  li:hover {
+    border-bottom: 1px solid $white;
+    background-clip: padding-box;
+    color: $white;
+  }
+}
+@media (max-width: 768px) {
+  .subNav {
+    align-self: center;
+  }
+}

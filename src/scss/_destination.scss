@@ -1,0 +1,94 @@
+@import "./variables";
+@import "./base.scss";
+
+.destination {
+  background-image: url(../assets/destination/background-destination-desktop.jpg);
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+
+  color: $white;
+  background-size: cover;
+}
+
+.activeElements {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 202px;
+  left: 166px;
+  gap: 1rem;
+  h5 {
+    color: $grey;
+  }
+  p {
+    color: $white;
+  }
+}
+.destinationFlexContainer {
+  display: flex;
+  position: absolute;
+  top: 343px;
+  width: 100vw;
+  justify-content: space-around;
+
+  .description {
+    top: 60px;
+
+    left: 1000px;
+    width: 445px;
+    height: 472px;
+    color: $white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    .whiteLine {
+      border-top: 1px solid rgba(208, 214, 249, 0.5);
+    }
+    .subDescription {
+      display: flex;
+      flex-direction: row;
+      height: 60px;
+      gap: 3em;
+      justify-content: left;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .destinationFlexContainer {
+    flex-direction: column;
+    top: 30%;
+    width: 80%;
+    left: 10%;
+    align-items: center;
+    text-align: center;
+    width: 573px;
+    position: absolute;
+    margin: 0;
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+    h2 {
+      font-size: 80px;
+    }
+    .description {
+      height: auto;
+      p {
+        padding: 1rem;
+      }
+      .subDescription {
+        padding: 1rem;
+        justify-content: center;
+      }
+    }
+  }
+  .activeElements {
+    left: 54px;
+    top: 136px;
+  }
+}

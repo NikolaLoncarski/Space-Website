@@ -1,0 +1,25 @@
+@import "./variables";
+@import "./base.scss";
+.crewDotNav {
+  list-style-type: none;
+  height: 15px;
+  width: 132px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  li {
+    height: 15px;
+    width: 15px;
+    background-color: $grey;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  li:hover {
+    background-color: $white;
+  }
+}
