@@ -47,7 +47,7 @@ export const AppProvider = ({ children }) => {
         dataInfo,
         destionationStatus,
         setStatus,
-        setDestinationStatus,
+
         windowSize,
       }}
     >
