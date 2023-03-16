@@ -14,7 +14,6 @@ export default function Destination() {
         e.destinations[destionationStatus];
 
       const imageSrc = images.png;
-
       return (
         <div key={id}>
           <div className="sectionIntro">
@@ -28,7 +27,7 @@ export default function Destination() {
               src={imageSrc}
               alt={e.crew[destionationStatus].name}
             />
-            <div className="description">
+            <article className="description">
               <DestinationSubNav
                 activeBorder={activeBorder}
                 setActiveBorder={setActiveBorder}
@@ -50,15 +49,15 @@ export default function Destination() {
                   <h5 className="belfair-reg">{travel}</h5>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       );
     });
 
   return (
-    <div className="destination">
+    <section className="destination">
       <Description />
-    </div>
+    </section>
   );
 }

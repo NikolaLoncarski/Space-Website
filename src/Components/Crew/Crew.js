@@ -21,8 +21,8 @@ export default function Crew() {
             <h5 className="barlow-reg"> 02</h5>
             <p className="barlow-reg">MEET YOUR CREW</p>
           </div>
-          <section className="flexCrewSection">
-            <div className="crewFlexContainer">
+          <div className="flexCrewSection">
+            <article className="crewFlexContainer">
               <div className="crewInfo">
                 <h4 className="belfair-lg"> {role}</h4>
                 <h3 className="belfair-xl">{name}</h3>
@@ -33,11 +33,11 @@ export default function Crew() {
                 setActiveDot={setActiveDot}
                 name={name}
               />
-            </div>
+            </article>
             <div className="imgContainer">
               <img src={imageSrc} alt={e.crew[destionationStatus].name} />
             </div>
-          </section>
+          </div>
         </div>
       );
     });

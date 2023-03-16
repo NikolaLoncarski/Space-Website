@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="home">
       <div className="intro">
-        <div className="leftIntro">
+        <article className="leftIntro">
           <h5 className="barlow-reg">So, you want to travel to</h5>{" "}
           <h1 className="belfair-3xl ">Space</h1>
           <p className="barlow-sm">
@@ -15,7 +15,7 @@ function Home() {
             Well sit back, and relax because we’ll give you a truly out of this
             world experience!
           </p>
-        </div>
+        </article>
         <div className="rightIntro">
           <Link to="destination">
             <button className="belfair-reg">Explore</button>

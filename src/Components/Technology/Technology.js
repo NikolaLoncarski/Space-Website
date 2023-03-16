@@ -42,11 +42,11 @@ export default function Technology() {
                 setActiveDot={setActiveDot}
                 name={name}
               />
-              <div className="techDetails">
+              <article className="techDetails">
                 <p className="barlow-xs">THE TECHNOLOGY</p>
                 <h3 className="belfair-xl">{name}</h3>
                 <p className="barlow-sm">{description}</p>
-              </div>
+              </article>
             </div>
 
             <img
