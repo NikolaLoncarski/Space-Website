@@ -504,6 +504,7 @@ title {
   color: #0b0d17;
   box-sizing: content-box;
   bottom: 20%;
+  border: none;
   cursor: pointer;
 }
 .rightIntro button:hover {
@@ -571,7 +572,7 @@ title {
   align-items: center;
   font-family: "barlow";
   font-size: 1em;
-  z-index: 2;
+  z-index: 1;
 }
 .nav .links {
   list-style: none;
@@ -764,7 +765,7 @@ li {
     top: 232px;
     flex-direction: column;
     left: 0;
-    width: 768px;
+    width: 80%;
     text-align: center;
     align-items: center;
     margin-top: 3rem;
