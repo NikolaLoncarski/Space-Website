@@ -8,7 +8,8 @@ function Nav() {
   let activeStyle = {
     borderBottom: "2px solid #fff",
   };
-  const { setDestionationStatus, setBackground } = useGlobalContext();
+  const { dispMenuButton, setDestionationStatus, setBackground } =
+    useGlobalContext();
 
   return (
     <>
@@ -18,6 +19,7 @@ function Nav() {
         </div>
 
         <div className="styled_line"></div>
+
         <div className="links" id="navLinks">
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : undefined)}

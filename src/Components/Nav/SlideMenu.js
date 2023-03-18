@@ -1,12 +1,15 @@
-import React, { useState } from "react";
-
 import HamMenu from "../../assets/shared/icon-hamburger.svg";
 import CloseMenu from "../../assets/shared/icon-close.svg";
+import { useGlobalContext } from "../Context/Context";
 function SlideMenu() {
-  const [dispMenuButton, setDispMenuButton] = useState(false);
+  const { dispMenuButton, setDispMenuButton } = useGlobalContext();
 
   const navSlideHandler = () => {
-    document.querySelector(".links").style.display = "flex";
+    {
+      !dispMenuButton
+        ? (document.querySelector(".links").style.display = "flex")
+        : (document.querySelector(".links").style.display = "none");
+    }
     setDispMenuButton(!dispMenuButton);
   };
 

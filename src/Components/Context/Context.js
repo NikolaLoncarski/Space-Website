@@ -2,12 +2,12 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import Data from "../../data.json";
 
 const dataInfo = [JSON.parse(JSON.stringify(Data))];
-
 const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
   const [destionationStatus, setDestinationStatus] = useState(0);
   const [status, setStatus] = useState();
+  const [dispMenuButton, setDispMenuButton] = useState(false);
   const windowSize = useRef([window.innerWidth]);
 
   const filterSatusHandler = () => {
@@ -47,7 +47,8 @@ export const AppProvider = ({ children }) => {
         dataInfo,
         destionationStatus,
         setStatus,
-
+        dispMenuButton,
+        setDispMenuButton,
         windowSize,
       }}
     >
