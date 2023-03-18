@@ -648,6 +648,7 @@ title {
     justify-content: space-evenly;
     padding: 0;
     height: 100vh;
+    animation: slider 0.1s linear;
   }
   .nav .links a {
     padding-top: 0;
@@ -655,6 +656,14 @@ title {
   }
   .nav .logo {
     width: fit-content;
+  }
+  @keyframes slider {
+    from {
+      transform: translateX(60%);
+    }
+    to {
+      transform: translateX(0%);
+    }
   }
 }
 .hamMenu {

@@ -88,6 +88,7 @@
       justify-content: space-evenly;
       padding: 0;
       height: 100vh;
+      animation: slider 0.1s linear;
       a {
         padding-top: 0;
         padding-bottom: 0;
@@ -95,6 +96,18 @@
     }
     .logo {
       width: fit-content;
+    }
+  }
+
+  /// slide menu animation slider
+  ///
+
+  @keyframes slider {
+    from {
+      transform: translateX(60%);
+    }
+    to {
+      transform: translateX(0%);
     }
   }
 }
