@@ -71,19 +71,27 @@
 @media (max-width: 375px) {
   .nav {
     justify-content: space-between;
-
+    width: auto;
     height: 40px;
     top: 24px;
     left: 24px;
+    right: 0;
 
     .links {
       display: none;
-      height: 100vh;
+      transform: translateY(45%);
+      right: 0;
       width: 60%;
       position: absolute;
-      right: 0;
+
       flex-direction: column;
+      justify-content: space-evenly;
       padding: 0;
+      height: 100vh;
+      a {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
     .logo {
       width: fit-content;

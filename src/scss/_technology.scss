@@ -83,15 +83,15 @@
       width: 80%;
       text-align: center;
       align-items: center;
-      margin-top: 3rem;
+      margin-top: 3rem auto;
       .techDetails {
         text-align: center;
-        width: 768px;
-        padding-bottom: 2rem;
+        width: 80%;
+        padding-bottom: auto;
       }
     }
     img {
-      min-width: 100%;
+      max-width: 100%;
     }
   }
   .techIntro {

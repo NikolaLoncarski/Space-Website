@@ -1,37 +1,34 @@
-// import React, { useState } from "react";
-// import { NavLink } from "react-router-dom";
-// import HamMenu from "../../assets/shared/icon-hamburger.svg";
-// import styles from "../../scss/slidemenu.module.scss";
-// function SlideMenu() {
-//   const [dispMenuButton, setDispMenuButton] = useState(true);
+import React, { useState } from "react";
 
-//   const openMenuHandler = () => {
-//     if (dispMenuButton === true) {
-//       const rootEl = document.getElementById("root");
-//       const navMenu = document.getElementById("navLinks");
-//       const slideInMenu = document.createElement("div");
+import HamMenu from "../../assets/shared/icon-hamburger.svg";
+import CloseMenu from "../../assets/shared/icon-close.svg";
+function SlideMenu() {
+  const [dispMenuButton, setDispMenuButton] = useState(false);
 
-//       slideInMenu.classList.add("styles.hamMenu");
+  const navSlideHandler = () => {
+    document.querySelector(".links").style.display = "flex";
+    setDispMenuButton(!dispMenuButton);
+  };
 
-//       rootEl.appendChild(slideInMenu);
-//       slideInMenu.appendChild(navMenu);
-//       navMenu.style.display = "unset";
-//       console.log(slideInMenu);
-//     } else {
-//       console.log("failure");
-//     }
-//   };
+  return (
+    <>
+      {!dispMenuButton ? (
+        <img
+          onClick={navSlideHandler}
+          className="hamMenu"
+          src={HamMenu}
+          alt="Hamburger Menu Icon"
+        />
+      ) : (
+        <img
+          onClick={navSlideHandler}
+          className="hamMenu"
+          src={CloseMenu}
+          alt="Hamburger Menu Icon"
+        />
+      )}
+    </>
+  );
+}
 
-//   return (
-//     <>
-//       <img
-//         onClick={openMenuHandler}
-//         className={styles.hamMenu}
-//         src={HamMenu}
-//         alt="Hamburger Menu Icon"
-//       />
-//     </>
-//   );
-// }
-
-// export default SlideMenu;
+export default SlideMenu;

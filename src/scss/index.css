@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 li {
@@ -129,6 +130,7 @@ li {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 li {
@@ -254,7 +256,7 @@ li {
   }
   .crewSection .flexCrewSection .crewFlexContainer .crewInfo {
     align-items: center;
-    width: 520px;
+    width: 90%;
   }
   .crewSection .flexCrewSection .crewFlexContainer .crewInfo h3 {
     margin: 0;
@@ -263,6 +265,7 @@ li {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 li {
@@ -316,6 +319,7 @@ li {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 li {
@@ -404,7 +408,6 @@ li {
     left: 12%;
     align-items: center;
     text-align: center;
-    width: 573px;
     position: absolute;
     margin: 0;
   }
@@ -520,8 +523,8 @@ title {
   .home .intro {
     flex-direction: column;
     top: 202px;
-    left: 159px;
-    width: 450px;
+    left: 10%;
+    width: 80%;
     bottom: 0;
     align-items: center;
     text-align: center;
@@ -537,8 +540,10 @@ title {
   .home .intro {
     flex-direction: column;
     top: 1px;
+    margin-left: 10% auto;
     left: 10%;
     width: 80%;
+    right: 10%;
     bottom: 0;
     align-items: center;
     text-align: center;
@@ -627,40 +632,49 @@ title {
 @media (max-width: 375px) {
   .nav {
     justify-content: space-between;
+    width: auto;
     height: 40px;
     top: 24px;
     left: 24px;
+    right: 0;
   }
   .nav .links {
     display: none;
-    height: 100vh;
+    transform: translateY(45%);
+    right: 0;
     width: 60%;
     position: absolute;
-    right: 0;
     flex-direction: column;
+    justify-content: space-evenly;
     padding: 0;
+    height: 100vh;
+  }
+  .nav .links a {
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .nav .logo {
     width: fit-content;
   }
 }
+.hamMenu {
+  display: none;
+}
+
 @media (max-width: 375px) {
   .hamMenu {
+    margin-right: 10px;
+    display: block;
     width: 24px;
     height: 21px;
-  }
-  .slideInMenu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 100vh;
-    background-color: red;
+    cursor: pointer;
+    z-index: 2;
   }
 }
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 li {
@@ -768,15 +782,15 @@ li {
     width: 80%;
     text-align: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 3rem auto;
   }
   .flexTechnology .techInfo .techDetails {
     text-align: center;
-    width: 768px;
-    padding-bottom: 2rem;
+    width: 80%;
+    padding-bottom: auto;
   }
   .flexTechnology img {
-    min-width: 100%;
+    max-width: 100%;
   }
   .techIntro {
     top: 136px;
@@ -786,6 +800,7 @@ li {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 li {

@@ -3,7 +3,7 @@ import "../../scss/index.css";
 import Logo from "../../assets/shared/logo.svg";
 import { NavLink, Outlet } from "react-router-dom";
 import { useGlobalContext } from "../Context/Context";
-
+import SlideMenu from "./SlideMenu";
 function Nav() {
   let activeStyle = {
     borderBottom: "2px solid #fff",
@@ -61,6 +61,7 @@ function Nav() {
             <strong>03</strong> Technology
           </NavLink>
         </div>
+        <SlideMenu />
       </nav>
 
       <main>

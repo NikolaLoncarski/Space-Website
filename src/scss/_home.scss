@@ -56,8 +56,8 @@ title {
     .intro {
       flex-direction: column;
       top: 202px;
-      left: 159px;
-      width: 450px;
+      left: 10%;
+      width: 80%;
       bottom: 0;
       align-items: center;
       text-align: center;
@@ -73,8 +73,10 @@ title {
     .intro {
       flex-direction: column;
       top: 1px;
+      margin-left: 10% auto;
       left: 10%;
       width: 80%;
+      right: 10%;
       bottom: 0;
       align-items: center;
       text-align: center;
