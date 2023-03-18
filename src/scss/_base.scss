@@ -30,3 +30,12 @@ li {
     top: 136px;
   }
 }
+@media (max-width: 375px) {
+  .sectionIntro {
+    width: 100%;
+    align-items: center;
+    left: 0;
+    top: 10%;
+    justify-content: center;
+  }
+}

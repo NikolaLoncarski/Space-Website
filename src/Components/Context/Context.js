@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
 import Data from "../../data.json";
 
-const dataInfo = [JSON.parse(JSON.stringify(Data))];
+const dataInfo = [Data];
 const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {

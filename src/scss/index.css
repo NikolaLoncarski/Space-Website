@@ -29,6 +29,15 @@ li {
     top: 136px;
   }
 }
+@media (max-width: 375px) {
+  .sectionIntro {
+    width: 100%;
+    align-items: center;
+    left: 0;
+    top: 10%;
+    justify-content: center;
+  }
+}
 .belfair-xs {
   font-family: "Bellefair", serif;
   font-weight: 400;
@@ -156,6 +165,15 @@ li {
   .sectionIntro {
     left: 38.5px;
     top: 136px;
+  }
+}
+@media (max-width: 375px) {
+  .sectionIntro {
+    width: 100%;
+    align-items: center;
+    left: 0;
+    top: 10%;
+    justify-content: center;
   }
 }
 .crewSection {
@@ -293,6 +311,15 @@ li {
     top: 136px;
   }
 }
+@media (max-width: 375px) {
+  .sectionIntro {
+    width: 100%;
+    align-items: center;
+    left: 0;
+    top: 10%;
+    justify-content: center;
+  }
+}
 .crewDotNav {
   list-style-type: none;
   height: 15px;
@@ -345,6 +372,15 @@ li {
   .sectionIntro {
     left: 38.5px;
     top: 136px;
+  }
+}
+@media (max-width: 375px) {
+  .sectionIntro {
+    width: 100%;
+    align-items: center;
+    left: 0;
+    top: 10%;
+    justify-content: center;
   }
 }
 .destination {
@@ -711,6 +747,15 @@ li {
     top: 136px;
   }
 }
+@media (max-width: 375px) {
+  .sectionIntro {
+    width: 100%;
+    align-items: center;
+    left: 0;
+    top: 10%;
+    justify-content: center;
+  }
+}
 .tech {
   background-image: url(../assets/technology/background-technology-desktop.jpg);
   background-attachment: fixed;
@@ -835,6 +880,15 @@ li {
   .sectionIntro {
     left: 38.5px;
     top: 136px;
+  }
+}
+@media (max-width: 375px) {
+  .sectionIntro {
+    width: 100%;
+    align-items: center;
+    left: 0;
+    top: 10%;
+    justify-content: center;
   }
 }
 .tech-bubble {
