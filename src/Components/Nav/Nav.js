@@ -8,7 +8,7 @@ function Nav() {
   let activeStyle = {
     borderBottom: "2px solid #fff",
   };
-  const { dispMenuButton, setDestionationStatus, setBackground } =
+  const { dispMenuButton, setDestionationStatus, setBgChanger } =
     useGlobalContext();
 
   return (
@@ -33,9 +33,7 @@ function Nav() {
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => {
               setDestionationStatus(0);
-              setBackground(
-                "url(../assets/destination/background-destination-desktop.jpg)"
-              );
+              setBgChanger("../assets/$/background-destination-desktop.jpg");
             }}
           >
             <strong>01</strong> Destination
@@ -46,7 +44,6 @@ function Nav() {
             to="crew"
             onClick={() => {
               setDestionationStatus(0);
-              setBackground("url(../assets/crew/background-crew-desktop.jpg");
             }}
           >
             <strong>02</strong> Crew
@@ -56,7 +53,6 @@ function Nav() {
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             to="technology"
             onClick={() => {
-              setBackground("url(../assets/crew/background-crew-desktop.jpg");
               setDestionationStatus(0);
             }}
           >

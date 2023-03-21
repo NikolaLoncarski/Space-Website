@@ -4,10 +4,16 @@ import "../../scss/index.css";
 import { useGlobalContext } from "../Context/Context";
 import DestinationSubNav from "./DestinationSubNav";
 export default function Destination() {
-  const { dataInfo, destionationStatus } = useGlobalContext();
+  const { dataInfo, destionationStatus, setBgChanger } = useGlobalContext();
 
   const [activeBorder, setActiveBorder] = useState(null);
-
+  const fetchData = async () => {
+    try {
+      return await fetch("https://http://localhost:3000/destination");
+    } catch (error) {
+      console.error(error);
+    }
+  };
   const Description = () =>
     dataInfo.map((e, i) => {
       const { name, images, description, distance, travel, id } =
