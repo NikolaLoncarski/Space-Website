@@ -23,6 +23,7 @@ title {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  overflow: visible;
 }
 .leftIntro {
   color: $white;
@@ -65,11 +66,12 @@ title {
   }
 }
 @media (max-width: 375px) {
-  h1 {
-    font-size: 80px;
-  }
   .home {
     background-image: url(../assets/home/background-home-mobile.jpg);
+    h1 {
+      font-size: 80px;
+    }
+
     .intro {
       flex-direction: column;
       top: 1px;
@@ -87,7 +89,6 @@ title {
     .rightIntro {
       width: fit-content;
       overflow: visible;
-      position: relative;
 
       button {
         width: 150px;

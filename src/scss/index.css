@@ -560,6 +560,7 @@ title {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  overflow: visible;
 }
 
 .leftIntro {
@@ -603,11 +604,11 @@ title {
   }
 }
 @media (max-width: 375px) {
-  h1 {
-    font-size: 80px;
-  }
   .home {
     background-image: url(../assets/home/background-home-mobile.jpg);
+  }
+  .home h1 {
+    font-size: 80px;
   }
   .home .intro {
     flex-direction: column;
@@ -626,7 +627,6 @@ title {
   .home .rightIntro {
     width: fit-content;
     overflow: visible;
-    position: relative;
   }
   .home .rightIntro button {
     width: 150px;
@@ -650,6 +650,7 @@ title {
   font-family: "barlow";
   font-size: 1em;
   z-index: 1;
+  overflow: visible;
 }
 .nav .links {
   list-style: none;
