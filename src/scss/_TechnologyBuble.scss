@@ -43,3 +43,15 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .tech-bubble {
+    height: 30px;
+    width: 120px;
+    button {
+      font-size: 12px;
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

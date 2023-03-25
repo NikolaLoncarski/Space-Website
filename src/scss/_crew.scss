@@ -6,8 +6,9 @@
   width: 100%;
   background-position: center;
   background-image: url(../assets/crew/background-crew-desktop.jpg);
-
+  overflow: hidden;
   background-size: cover;
+
   .flexCrewSection {
     position: absolute;
     display: flex;
@@ -58,7 +59,7 @@
   }
   .imgContainer {
     height: 100%;
-
+    overflow: hidden;
     width: max-content;
     max-height: 100%;
     object-fit: cover;
@@ -74,7 +75,7 @@
   .crewSection {
     background-image: url(../assets/crew/background-crew-tablet.jpg);
     align-items: center;
-    
+
     .flexCrewSection {
       top: 15%;
       flex-direction: column;
@@ -102,6 +103,7 @@
           width: 90%;
           h3 {
             margin: 0;
+            font-size: 30px;
           }
         }
       }

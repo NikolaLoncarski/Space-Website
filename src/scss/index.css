@@ -182,6 +182,7 @@ li {
   width: 100%;
   background-position: center;
   background-image: url(../assets/crew/background-crew-desktop.jpg);
+  overflow: hidden;
   background-size: cover;
 }
 .crewSection .flexCrewSection {
@@ -234,6 +235,7 @@ li {
 }
 .crewSection .imgContainer {
   height: 100%;
+  overflow: hidden;
   width: max-content;
   max-height: 100%;
   object-fit: cover;
@@ -278,6 +280,7 @@ li {
   }
   .crewSection .flexCrewSection .crewFlexContainer .crewInfo h3 {
     margin: 0;
+    font-size: 30px;
   }
 }
 * {
@@ -427,6 +430,7 @@ li {
 }
 .destinationFlexContainer .description .whiteLine {
   border-top: 1px solid rgba(208, 214, 249, 0.5);
+  flex-basis: 1;
 }
 .destinationFlexContainer .description .subDescription {
   display: flex;
@@ -467,6 +471,33 @@ li {
   .activeElements {
     left: 54px;
     top: 136px;
+  }
+}
+@media (max-width: 375px) {
+  .destination {
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+    width: 375px;
+    height: 850px;
+  }
+  .destination .destinationFlexContainer {
+    top: 20%;
+    height: fit-content;
+  }
+  .destination .destinationFlexContainer img {
+    height: 170px;
+    width: 170px;
+  }
+  .destination .description {
+    width: 327px;
+  }
+  .destination .description h2 {
+    font-size: 56px;
+  }
+  .destination .description p {
+    font-size: 16px;
+  }
+  .destination .description .subDescription {
+    height: fit-content;
   }
 }
 .subNav {
@@ -676,7 +707,7 @@ title {
   }
   .nav .links {
     display: none;
-    transform: translateY(45%);
+    transform: translateY(44%);
     right: 0;
     width: 60%;
     position: absolute;
@@ -851,6 +882,15 @@ li {
     left: 24px;
   }
 }
+@media (max-width: 375px) {
+  .flexTechnology {
+    top: 20%;
+    height: 80%;
+  }
+  .flexTechnology .techInfo {
+    height: 70%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -929,5 +969,16 @@ li {
   .tech-bubble button {
     height: 60px;
     width: 60px;
+  }
+}
+@media (max-width: 375px) {
+  .tech-bubble {
+    height: 30px;
+    width: 120px;
+  }
+  .tech-bubble button {
+    font-size: 12px;
+    height: 30px;
+    width: 30px;
   }
 }

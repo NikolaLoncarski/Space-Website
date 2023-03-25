@@ -99,3 +99,12 @@
     left: 24px;
   }
 }
+@media (max-width: 375px) {
+  .flexTechnology {
+    top: 20%;
+    height: 80%;
+    .techInfo {
+      height: 70%;
+    }
+  }
+}

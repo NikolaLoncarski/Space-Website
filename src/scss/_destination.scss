@@ -46,6 +46,7 @@
 
     .whiteLine {
       border-top: 1px solid rgba(208, 214, 249, 0.5);
+      flex-basis: 1;
     }
     .subDescription {
       display: flex;
@@ -90,5 +91,35 @@
   .activeElements {
     left: 54px;
     top: 136px;
+  }
+}
+
+@media (max-width: 375px) {
+  .destination {
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+    width: 375px;
+    height: 850px;
+
+    .destinationFlexContainer {
+      top: 20%;
+
+      height: fit-content;
+      img {
+        height: 170px;
+        width: 170px;
+      }
+    }
+    .description {
+      width: 327px;
+      h2 {
+        font-size: 56px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .subDescription {
+        height: fit-content;
+      }
+    }
   }
 }
