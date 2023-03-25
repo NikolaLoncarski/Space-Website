@@ -8,8 +8,11 @@ export const AppProvider = ({ children }) => {
   const [destionationStatus, setDestinationStatus] = useState(0);
   const [status, setStatus] = useState();
   const [dispMenuButton, setDispMenuButton] = useState(false);
-  const windowSize = useRef([window.innerWidth]);
 
+  const [bgChanger, setBgChanger] = useState("");
+
+  const windowSize = useRef([window.innerWidth]);
+  console.log(bgChanger);
   const filterSatusHandler = () => {
     switch (status) {
       case "Moon":
@@ -50,6 +53,7 @@ export const AppProvider = ({ children }) => {
         dispMenuButton,
         setDispMenuButton,
         windowSize,
+        setBgChanger,
       }}
     >
       {children}
