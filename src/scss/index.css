@@ -483,22 +483,16 @@ li {
     width: 375px;
     height: 850px;
   }
-<<<<<<< HEAD
   .destination .destinationFlexContainer {
     top: 20%;
     height: fit-content;
   }
-=======
->>>>>>> master
   .destination .destinationFlexContainer img {
     height: 170px;
     width: 170px;
   }
   .destination .description {
-<<<<<<< HEAD
-=======
     padding-top: 3rem;
->>>>>>> master
     width: 327px;
   }
   .destination .description h2 {
@@ -507,12 +501,9 @@ li {
   .destination .description p {
     font-size: 16px;
   }
-<<<<<<< HEAD
   .destination .description .subDescription {
     height: fit-content;
   }
-=======
->>>>>>> master
 }
 .subNav {
   font-family: "Barlow Condensed", sans-serif;
