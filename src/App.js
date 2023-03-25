@@ -4,12 +4,14 @@ import "./scss/index.css";
 import Destination from "./Components/Destionation/Destination";
 import Crew from "./Components/Crew/Crew";
 import Technology from "./Components/Technology/Technology";
+import { useGlobalContext } from "./Components/Context/Context";
 import {
   createRoutesFromElements,
   createBrowserRouter,
   Route,
   RouterProvider,
 } from "react-router-dom";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Nav />}>
@@ -22,6 +24,7 @@ const router = createBrowserRouter(
 );
 
 function App() {
+  const { setDestinationStatus } = useGlobalContext();
   return (
     <>
       <RouterProvider router={router} />

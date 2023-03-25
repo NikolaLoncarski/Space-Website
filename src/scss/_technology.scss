@@ -1,15 +1,7 @@
 @import "./variables";
 @import "./base.scss";
 .tech {
-  background-image: url(../assets/technology/background-technology-desktop.jpg);
-
-  background-attachment: fixed;
-  height: 100vh;
-  width: 100%;
-  background-position: center;
-
   color: $white;
-  background-size: cover;
 }
 
 .flexTechnology {
@@ -27,13 +19,13 @@
     display: flex;
     flex-direction: row;
     color: $white;
-    justify-content: space-around;
+    justify-content: start;
 
     min-width: 0;
     align-self: center;
   }
   .techDetails {
-    max-width: 614px;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -71,10 +63,10 @@
 }
 @media (max-width: 768px) {
   .flexTechnology {
-    position: absolute;
     top: 30%;
     flex-direction: column-reverse;
     left: 0;
+    height: 70%;
 
     .techInfo {
       top: 232px;

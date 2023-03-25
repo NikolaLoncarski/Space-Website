@@ -8,11 +8,16 @@ function Nav() {
   let activeStyle = {
     borderBottom: "2px solid #fff",
   };
-  const { dispMenuButton, setDestionationStatus, setBgChanger } =
-    useGlobalContext();
+  const {
+    resetPage,
+    destionationStatus,
+    setDestinationStatus,
+    setBgChanger,
+    bgChanger,
+  } = useGlobalContext();
 
   return (
-    <>
+    <div className={`background-${bgChanger}`}>
       <nav className="nav">
         <div className="logo">
           <img src={Logo} alt="logo" />
@@ -24,6 +29,10 @@ function Nav() {
           <NavLink
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             to="/"
+            onClick={() => {
+              resetPage();
+              setBgChanger("home");
+            }}
           >
             <strong>00</strong> Home
           </NavLink>
@@ -32,8 +41,10 @@ function Nav() {
             to="destination"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => {
-              setDestionationStatus(0);
-              setBgChanger("../assets/$/background-destination-desktop.jpg");
+              if (destionationStatus === 3) {
+                setDestinationStatus();
+              }
+              setBgChanger("destination");
             }}
           >
             <strong>01</strong> Destination
@@ -43,7 +54,10 @@ function Nav() {
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             to="crew"
             onClick={() => {
-              setDestionationStatus(0);
+              if (destionationStatus === 3) {
+                setDestinationStatus(0);
+              }
+              setBgChanger("crew");
             }}
           >
             <strong>02</strong> Crew
@@ -53,7 +67,11 @@ function Nav() {
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             to="technology"
             onClick={() => {
-              setDestionationStatus(0);
+              if (destionationStatus >= 3) {
+                setBgChanger("technology");
+                setDestinationStatus(0);
+              }
+              setBgChanger("technology");
             }}
           >
             <strong>03</strong> Technology
@@ -65,7 +83,7 @@ function Nav() {
       <main>
         <Outlet />
       </main>
-    </>
+    </div>
   );
 }
 

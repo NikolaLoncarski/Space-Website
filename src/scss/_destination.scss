@@ -2,14 +2,7 @@
 @import "./base.scss";
 
 .destination {
-  background-image: url(../assets/destination/background-destination-desktop.jpg);
-  background-attachment: fixed;
-  height: 100vh;
-  width: 100%;
-  background-position: center;
-
   color: $white;
-  background-size: cover;
 }
 
 .activeElements {
@@ -96,7 +89,6 @@
 
 @media (max-width: 375px) {
   .destination {
-    background-image: url(../assets/destination/background-destination-mobile.jpg);
     width: 375px;
     height: 850px;
 

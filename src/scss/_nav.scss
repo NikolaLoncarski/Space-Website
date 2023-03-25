@@ -1,6 +1,6 @@
 @import "./variables";
 .nav {
-  position: absolute;
+  // position: absolute;
   top: 37px;
   left: 10%;
   display: flex;
@@ -57,17 +57,21 @@
   }
 }
 @media (max-width: 768px) {
+  .logo {
+    width: fit-content;
+  }
   .styled_line {
     display: none;
   }
 
-  .nav {
-    max-width: 729px;
+  //   .nav {
+  //     max-width: 729px;
 
-    .links {
-      max-width: 450px;
-    }
-  }
+  //     .links {
+  //       max-width: 450px;
+  //     }
+  //   }
+  // }
 }
 @media (max-width: 375px) {
   .nav {
@@ -84,7 +88,7 @@
       right: 0;
       width: 60%;
       position: absolute;
-
+      z-index: 2;
       flex-direction: column;
       justify-content: space-evenly;
       padding: 0;

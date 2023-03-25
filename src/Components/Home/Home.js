@@ -1,8 +1,9 @@
 import React from "react";
 import "../../scss/index.css";
 import { Link } from "react-router-dom";
-
+import { useGlobalContext } from "../Context/Context";
 function Home() {
+  
   return (
     <div className="home">
       <div className="intro">

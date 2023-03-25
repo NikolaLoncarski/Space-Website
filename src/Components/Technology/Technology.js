@@ -4,11 +4,12 @@ import { useGlobalContext } from "../Context/Context";
 import TechnologyBuble from "./TechnologyBuble";
 
 export default function Technology() {
-  const { dataInfo, destionationStatus } = useGlobalContext();
+  const { dataInfo, destionationStatus, setBgChanger } = useGlobalContext();
   const [activeDot, setActiveDot] = useState(null);
 
   const [windowSize, setWindowSize] = useState([window.innerWidth]);
   useEffect(() => {
+    setBgChanger("technology");
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth]);
     };

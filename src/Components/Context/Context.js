@@ -13,6 +13,11 @@ export const AppProvider = ({ children }) => {
 
   const windowSize = useRef([window.innerWidth]);
   console.log(bgChanger);
+
+  const resetPage = () => {
+    setDestinationStatus(0);
+  };
+
   const filterSatusHandler = () => {
     switch (status) {
       case "Moon":
@@ -44,6 +49,7 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     filterSatusHandler();
   }, [filterSatusHandler]);
+
   return (
     <AppContext.Provider
       value={{
@@ -54,6 +60,8 @@ export const AppProvider = ({ children }) => {
         setDispMenuButton,
         windowSize,
         setBgChanger,
+        bgChanger,
+        resetPage,
       }}
     >
       {children}
