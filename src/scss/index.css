@@ -723,7 +723,6 @@ li {
     width: 170px;
   }
   .destination .description {
-    padding-top: 3rem;
     width: 327px;
   }
   .destination .description h2 {
@@ -844,7 +843,7 @@ li {
   align-self: center;
 }
 .flexTechnology .techDetails {
-  max-width: 50%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -916,6 +915,9 @@ li {
   }
   .flexTechnology .techInfo {
     height: 70%;
+  }
+  .flexTechnology .techInfo .techDetails {
+    width: 100%;
   }
 }
 * {
