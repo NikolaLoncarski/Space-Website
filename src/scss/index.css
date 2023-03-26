@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 li {
@@ -385,7 +384,6 @@ title {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 li {
@@ -527,7 +525,6 @@ li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 li {
@@ -591,7 +588,6 @@ li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 li {
@@ -674,6 +670,7 @@ li {
   height: 60px;
   gap: 3em;
   justify-content: left;
+  overflow: visible;
 }
 
 @media (max-width: 768px) {
@@ -782,7 +779,6 @@ li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 li {
@@ -924,7 +920,6 @@ li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 li {
