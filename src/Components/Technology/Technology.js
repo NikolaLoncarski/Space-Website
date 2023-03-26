@@ -25,7 +25,7 @@ export default function Technology() {
       const { name, images, description, id } = e.technology[pageStatus];
       let imageSrc = images.portrait;
       if (windowSize <= 768) {
-        /// checks for screen width and renders image in the text at an prtopriate width
+        /// checks for screen width and renders image in the text at an aprtopriate width
         imageSrc = images.landscape;
       }
 
