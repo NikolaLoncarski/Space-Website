@@ -1,50 +1,43 @@
-import React, { useContext, useState, useEffect, useRef } from "react";
+import React, { useContext, useState, useEffect, useCallback } from "react";
 import Data from "../../data.json";
 
 const dataInfo = [Data];
 const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
-  const [destionationStatus, setDestinationStatus] = useState(0);
+  const [pageStatus, setPageStatus] = useState(0);
   const [status, setStatus] = useState();
   const [dispMenuButton, setDispMenuButton] = useState(false);
-
   const [bgChanger, setBgChanger] = useState("home");
 
-  const windowSize = useRef([window.innerWidth]);
-  console.log(bgChanger);
-
-  const resetPage = () => {
-    setDestinationStatus(0);
-  };
-
-  const filterSatusHandler = () => {
+  /// page rendering switch case ,checks for status in the code and renders on page depending of that
+  const filterSatusHandler = useCallback(() => {
     switch (status) {
       case "Moon":
       case "Douglas Hurley":
       case "Launch vehicle":
-        setDestinationStatus(0);
+        setPageStatus(0);
         break;
       case "Mars":
       case "Mark Shuttleworth":
       case "Spaceport":
-        setDestinationStatus(1);
+        setPageStatus(1);
         break;
       case "Europa":
       case "Victor Glover":
       case "Space capsule":
-        setDestinationStatus(2);
+        setPageStatus(2);
         break;
       case "Titan":
       case "Anousheh Ansari":
-        setDestinationStatus(3);
+        setPageStatus(3);
         break;
       default:
-        setDestinationStatus(0);
+        setPageStatus(0);
 
         break;
     }
-  };
+  }, [status]);
 
   useEffect(() => {
     filterSatusHandler();
@@ -54,14 +47,13 @@ export const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         dataInfo,
-        destionationStatus,
+        pageStatus,
         setStatus,
         dispMenuButton,
         setDispMenuButton,
-        windowSize,
+
         setBgChanger,
         bgChanger,
-        resetPage,
       }}
     >
       {children}

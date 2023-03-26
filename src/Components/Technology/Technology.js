@@ -4,18 +4,17 @@ import { useGlobalContext } from "../Context/Context";
 import TechnologyBuble from "./TechnologyBuble";
 
 export default function Technology() {
-  const { dataInfo, destionationStatus, setBgChanger } = useGlobalContext();
+  const { dataInfo, pageStatus, setBgChanger } = useGlobalContext();
   const [activeDot, setActiveDot] = useState(null);
-
   const [windowSize, setWindowSize] = useState([window.innerWidth]);
+
+  /// reads screen width every time it changes
   useEffect(() => {
     setBgChanger("technology");
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth]);
     };
-
     window.addEventListener("resize", handleWindowResize);
-
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
@@ -23,10 +22,10 @@ export default function Technology() {
 
   const Description = () =>
     dataInfo.map((e) => {
-      const { name, images, description, id } =
-        e.technology[destionationStatus];
+      const { name, images, description, id } = e.technology[pageStatus];
       let imageSrc = images.portrait;
       if (windowSize <= 768) {
+        /// checks for screen width and renders image in the text at an prtopriate width
         imageSrc = images.landscape;
       }
 
@@ -53,7 +52,7 @@ export default function Technology() {
             <img
               className="planetImg"
               src={imageSrc}
-              alt={e.technology[destionationStatus].name}
+              alt={e.technology[pageStatus].name}
             />
           </div>
         </div>

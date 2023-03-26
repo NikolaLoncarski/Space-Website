@@ -4,7 +4,7 @@ import "../../scss/index.css";
 import { useGlobalContext } from "../Context/Context";
 import DestinationSubNav from "./DestinationSubNav";
 export default function Destination() {
-  const { dataInfo, destionationStatus, setBgChanger } = useGlobalContext();
+  const { dataInfo, pageStatus } = useGlobalContext();
 
   const [activeBorder, setActiveBorder] = useState(null);
   const fetchData = async () => {
@@ -17,7 +17,7 @@ export default function Destination() {
   const Description = () =>
     dataInfo.map((e, i) => {
       const { name, images, description, distance, travel, id } =
-        e.destinations[destionationStatus];
+        e.destinations[pageStatus];
 
       const imageSrc = images.png;
       return (
@@ -31,7 +31,7 @@ export default function Destination() {
               className="planetImg"
               key={name}
               src={imageSrc}
-              alt={e.crew[destionationStatus].name}
+              alt={e.crew[pageStatus].name}
             />
             <article className="description">
               <DestinationSubNav

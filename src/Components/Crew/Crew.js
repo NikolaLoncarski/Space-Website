@@ -5,13 +5,13 @@ import { useGlobalContext } from "../Context/Context";
 import CrewDotNav from "./CrewDotNav";
 
 export default function Crew() {
-  const { dataInfo, destionationStatus } = useGlobalContext();
+  const { dataInfo, pageStatus } = useGlobalContext();
 
   const [activeDot, setActiveDot] = useState(null);
 
   const Description = () =>
-    dataInfo.map((e, i) => {
-      const { name, images, role, bio, id } = e.crew[destionationStatus];
+    dataInfo.map((e) => {
+      const { name, images, role, bio, id } = e.crew[pageStatus];
 
       const imageSrc = images.png;
 
@@ -35,7 +35,7 @@ export default function Crew() {
               />
             </article>
             <div className="imgContainer">
-              <img src={imageSrc} alt={e.crew[destionationStatus].name} />
+              <img src={imageSrc} alt={e.crew[pageStatus].name} />
             </div>
           </div>
         </div>

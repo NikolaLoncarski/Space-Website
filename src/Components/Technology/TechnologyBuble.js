@@ -6,7 +6,7 @@ function TechnologyBuble({ setActiveDot, name }) {
   const FilteredCrew = () =>
     dataInfo
       .map((e) => e.technology)
-      .flat(2)
+      .flat(2) //// renders buttons dinamicaly depending on the number of subarticles
       .map((e, i) => {
         const reference = e.name;
         return (

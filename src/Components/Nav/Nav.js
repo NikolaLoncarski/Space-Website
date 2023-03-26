@@ -8,13 +8,8 @@ function Nav() {
   let activeStyle = {
     borderBottom: "2px solid #fff",
   };
-  const {
-    resetPage,
-    destionationStatus,
-    setDestinationStatus,
-    setBgChanger,
-    bgChanger,
-  } = useGlobalContext();
+  const { pageStatus, setPageStatus, setBgChanger, bgChanger } =
+    useGlobalContext();
 
   return (
     <div className={`background-${bgChanger}`}>
@@ -30,7 +25,6 @@ function Nav() {
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             to="/"
             onClick={() => {
-              resetPage();
               setBgChanger("home");
             }}
           >
@@ -41,8 +35,8 @@ function Nav() {
             to="destination"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => {
-              if (destionationStatus === 3) {
-                setDestinationStatus();
+              if (pageStatus === 3) {
+                setPageStatus();
               }
               setBgChanger("destination");
             }}
@@ -54,8 +48,8 @@ function Nav() {
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             to="crew"
             onClick={() => {
-              if (destionationStatus === 3) {
-                setDestinationStatus(0);
+              if (pageStatus === 3) {
+                setPageStatus(0);
               }
               setBgChanger("crew");
             }}
@@ -67,9 +61,9 @@ function Nav() {
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             to="technology"
             onClick={() => {
-              if (destionationStatus >= 3) {
+              if (pageStatus >= 3) {
                 setBgChanger("technology");
-                setDestinationStatus(0);
+                setPageStatus(0);
               }
               setBgChanger("technology");
             }}
