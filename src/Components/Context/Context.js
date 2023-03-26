@@ -9,7 +9,7 @@ export const AppProvider = ({ children }) => {
   const [status, setStatus] = useState();
   const [dispMenuButton, setDispMenuButton] = useState(false);
 
-  const [bgChanger, setBgChanger] = useState("");
+  const [bgChanger, setBgChanger] = useState("home");
 
   const windowSize = useRef([window.innerWidth]);
   console.log(bgChanger);
